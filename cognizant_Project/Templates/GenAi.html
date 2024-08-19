@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'GenAi.css' %}">
+
+  </head>
+  <body>
+    <div id="sectionGenAI">
+    <div class="bg-container pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="d-flex flex-row mb-3">
+                        <h2 class="cust_id_label">Customer_ID:</h2>
+                        <p class="cust_id">C5110785</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row">
+                <div class="cust-details-card1 mr-3 pt-3 pb-2">
+                    <div class="d-flex flex-row">
+                        <h4 class="cust_details_label">Age: </h4>
+                        <h4 class="cust_details_description">52 years</h4>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h4 class="cust_details_label">Mobile_No: </h4>
+                        <h4 class="cust_details_description">9600781134</h4>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h4 class="cust_details_label">Email_ID: </h4>
+                        <h4 class="cust_details_description">2xfo3mqak@email.org</h4>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h4 class="cust_details_label">Past_orders: </h4>
+                        <h4 class="cust_details_description">Saving Account</h4>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="cust-details-card1">
+                        <h2 class="cust_score_title">Customer Score:</h2>
+
+                        <h5 class="scoring-title">CIBIL Score:</h5>
+                        <p class="cibil_score">490/900</p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-primary progress-bar-custom" role="progressbar" style="width: 54%;" aria-valuenow="490" aria-valuemin="0" aria-valuemax="900"></div>
+                        </div>    
+                        <div class="d-flex flex-row">
+                            <h5 class="relation_value">Relation Value:</h5>
+                            <p class="relation-high">High</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="gen-report-title text-center col-12 pt-5 pb-5">Understand how are the customer and product good fit for each other</h2>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="strengths-container p-3 mr-2">
+                    <h1 class="strenth_title text-center">Strengths for the product</h1>
+                    <ul class="insights_list">
+                        <li>Approaching retirement age</li>
+                        <li>May indicate financial challenges</li>
+                        <li>Potential for loyalty and long-term engagement</li>
+                        <li>Experience with regular savings</li>
+                    </ul>
+                </div>
+
+                <div class="nps_container p-3">
+                    <h1 class="nps_title text-center">Benefits from product</h1>
+                    <ul class="insights_list">
+                        <li>Long-term financial security</li>
+                        <li>Low risk product</li>
+                        <li>Tax benefits</li>
+                        <li>Similar concept of regular contributions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center">
+                <div class="recommendations_container p-3 mr-2">
+                    <h1 class="recommendations_title text-center">Recommendations while pitching</h1>
+                    <ul class="insights_list">
+                        <li>Emphasize the benefits of a pension in later years</li>
+                        <li>May indicate financial challenges</li>
+                        <li>Potential for loyalty and long-term engagement</li>
+                        <li>highlight the similarities and potential for higher returns</li>
+                    </ul>
+                </div>
+
+                <div class="imp_consideration_container p-3">
+                    <h1 class="imp_consideration_title text-center">Considerations while pitching</h1>
+                    <ul class="insights_list">
+                        <li>Discuss the lock-in period and potential for liquidity issues</li>
+                        <li>Suggest improving credit score for better future financial options</li>
+                        <li>Explain the importance of regular contributions for maximizing benefits</li>
+                        <li>Compare and contrast the features and benefits of both products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

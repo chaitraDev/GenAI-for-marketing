@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'First_page.css' %}">
+</head>
+
+<body>
+    <div class="bg-container pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+                        <button class="find_lead_button m-1">Find Leads</button>
+                        <button class="customer_stats_button m-1"><a href="{% url 'App:Dashboard' %}">Customer Stats</a></button>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="main-heading pt-5">Find Your Next Lead</h1>
+                        <p class="main-description p-3">Enter a Product Name to discover potential customer and leads ready for conversion.
+                            Use this tool to explore targeted insights and personalize your approach.
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="search-bar-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search icon" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                            <div class="input-group">
+                                <input type="text" class="form-control search-text" id="searchInput" aria-describedby="dropdownMenuButton">
+                                <div class="input-group-append">
+                                    <button class="drop-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#" onclick="selectItem('Travel Insurance')">Travel Insurance</a>
+                                        <a class="dropdown-item" href="#" onclick="selectItem('Recurring Deposit')">Recurring Deposit</a>
+                                        <a class="dropdown-item" href="#" onclick="selectItem('Saving Account')">Saving Account</a>
+                                        <a class="dropdown-item" href="#" onclick="selectItem('Health Insurance')">Health Insurance</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-container1">
+                                <button type="button" id="searchButton" class="products-card-button" data-toggle="modal" data-target="#smartHeadphonesModel">
+                                    search
+                                </button>
+                                <div class="modal fade" id="smartHeadphonesModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog mt-5">
+                                        <div class="modal-content login-card">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title popup-window-main-heading pt-4 pb-2" id="examcard-modal-pleModalLabel">Authentication Required</h5>
+                                                <button type="button" class="close pt-4 pb-2" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body height=80vh">
+                                                <p class="popup-window-description pb-3">Authenticate with your User ID to access your marketing dashboard.</p>
+                                                <div method="post" action="{% url 'App:Login' %}">
+                                                    {% csrf_token %}
+                                                    <div class="mb-3">
+                                                        <label for="userId" class="form-label">User ID</label>
+                                                        <input type="text" class="form-control input-box" name="username" placeholder="Enter your User ID">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="password" class="form-label">Password</label>
+                                                        <input type="password" class="form-control input-box" name="password" placeholder="Enter your password">
+                                                    </div>
+                                                    <div class="form-check mb-3">
+                                                        <input type="checkbox" class="form-check-input" id="terms">
+                                                        <label class="form-check-label" for="terms">Terms and conditions applied</label>
+                                                    </div>
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                        <button type="submit" class="btn btn-success login-button">Login</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sectionCustomerDetails">
+                        <h3 class="table-title">Potential Customers</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customer_ID</th>
+                                    <th>Age</th>
+                                    <th>Income</th>
+                                    <th>Cibil_Score</th>
+                                    <th>Relationship_Value</th>
+                                    <th>Prev_Product</th>
+                                    <th>Phone_Number</th>
+                                    <th>Email_ID</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>C4155881</td>
+                                    <td>65.0</td>
+                                    <td>375.0</td>
+                                    <td>526.0</td>
+                                    <td>high</td>
+                                    <td>Recurring_Deposit</td>
+                                    <td>9304034194</td>
+                                    <td>2q0em4@domain.com</td>
+                                    <td><button class="table-button"><a href="{% url 'App:Report' %}">More Insights</a></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function selectItem(item) {
+            document.getElementById("searchInput").value = item;
+        }
+    </script>
+</body>
+</html>

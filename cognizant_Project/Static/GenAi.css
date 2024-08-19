@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+:root{
+--bg-black:#000000;
+--lg-green:#EEF9EB;
+--dk-green:#4DC559;
+--col_name-grey:#666666;
+--row-grey:#282626;
+--dk-grey: #232323;
+--dk-blue: #307FE2;
+}
+.cust_id_label{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: inter;
+    margin: 1em;
+}
+.cust_id{
+    color: #ffffff;
+    font-size: 23px;
+    font-family: inter;
+    margin-top: 0.7em;
+}
+.bg-container{
+    background-color: var(--bg-black);
+    background-size: cover;
+}
+.form-label{
+    color: #ffffff;
+    font-size: 23px;
+    font-family: inter;
+    margin: 1em;
+}
+
+.custid_input{
+    background-color: var(--bg-black);
+    color: #ffffff;
+    font-size: 19px;
+    font-family: inter;
+    border: none;
+}
+.cust-details-card1{
+    background-color: var(--dk-grey);
+    background-size: cover;
+    color: #ffffff;
+    border-radius: 0.5em;
+    width: 432px;
+    padding: 1em;
+}
+
+.cust_details_label{
+    font-family: inter;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0.3em;
+}
+.cust_details_description{
+    font-family: inter;
+    font-size: 18px;
+    padding: 0.4em;
+}
+.cust_score_title{
+    font-family: inter;
+    font-size: 18px;
+    font-weight: bold;
+}
+.scoring-title{
+    font-size: 16px;
+    font-family: inter;
+    font-weight: 700;
+}
+
+.cibil_score{
+    text-align: right;
+    font-size: 15px;
+    font-family: inter;
+    color: var(--dk-blue);
+}
+.relation_value{
+    font-size: 18px;
+    font-family: inter;
+    font-weight: 700;
+}
+.relation-high {
+    font-family: inter;
+    font-size: 18px;
+    color: var(--dk-green);
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.gen-report-title{
+    font-family: inter;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.strengths-container{
+    width: 50%;
+    background-color: var(--dk-grey);
+    color: #ffffff;
+    font-family: inter;
+    border-radius: 0.3em;
+}
+.strenth_title{
+    font-family: inter;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 1em;
+}
+.insights_list{
+    font-size: large;
+    padding-left: 2em;
+}
+.nps_container{
+    width: 50%;
+    background-color: #D9F2DB;
+    color: var(--bg-black);
+    font-family: inter;
+    border-radius: 0.3em;
+}
+.nps_title{
+    font-family: inter;
+    font-size: 23px;
+    font-weight: 900;
+    padding: 1em;
+}
+.recommendations_container{
+    width: 65%;
+    background-color: #D9F2DB;
+    color: var(--bg-black);
+    font-family: inter;
+    border-radius: 0.3em;
+    margin-top: 0.3em;
+}
+.recommendations_title{
+    font-family: inter;
+    font-size: 23px;
+    font-weight: 900;
+    padding: 1em;
+}
+.imp_consideration_container{
+    width: 64%;
+    background-color: var(--dk-grey);
+    color: #ffffff;
+    font-family: inter;
+    border-radius: 0.3em;
+    margin-top: 0.3em;
+}
+.imp_consideration_title{
+    font-family: inter;
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
