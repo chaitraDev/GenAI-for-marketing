@@ -44,9 +44,9 @@ def recommend(product_name,customers,products_data):
     return targets
 
 import google.generativeai as genai
-#he ekdach run karaycha ahe
+
 def setup_genai():
-    api = "AIzaSyAISyCQdC9CQlA910QA_3JLhONfqv90O18"
+    api = ""
 
     genai.configure(api_key = api)
     model = genai.GenerativeModel('gemini-1.5-flash',system_instruction="You are sales team lead in bank")
